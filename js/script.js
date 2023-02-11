@@ -61,14 +61,25 @@ const titleClickHandler = function(event){
     clearTitleList();
 
     /* for each article */
+    const articles = document.querySelectorAll(optArticleSelector);
 
-    /* get the article id */
+    for(let article of articles){
+   
+    }
+
+    /* [DONE] get the article id */
+    const articleId = clickedElement.getAttribute('id');
 
     /* find the title element */
+    
+    const articleTitle = article.querySelector(optTitleSelector).innerHTML;
 
-    /* get the title from the title element */
+    /*  [DONE] get the title from the title element */
+    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
 
     /* create HTML of the link */
+
+    titleList.insertAdjacentHTML(beforeend, linkHTML);
 
     /* insert link into titleList */
 
